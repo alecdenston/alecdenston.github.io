@@ -1,0 +1,60 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+    	function show() {
+    		document.getElementById("dropdown").classList.toggle ("show");
+    	}
+        function goBack() {
+            window.history.back();
+        }
+        
+  
+	  
+window.onclick = function(event) {
+    
+  if (!event.target.matches('.threed'))
+  {
+
+    var dropdowns = document.getElementsByClassName("dropdown");
+      console.log(dropdowns) ;
+    var i;
+      
+    for (i = 0; i < dropdowns.length; i++) 
+    {
+        
+      var openDropdown = dropdowns[i];
+        
+      if (openDropdown.classList.contains('show')) 
+      {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function setCurrent() {
+  navObject = document.getElementById('dropdown').getElementsByTagName('a');
+  for(i=0;i<navObject .length;i++) {
+    if(document.location.href.indexOf(navObject [i].href)>=0) {
+      navObject [i].className='current';
+    }
+  }
+}
+
+window.onload = setCurrent();
+
+//Test if on a phone
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) 
+{
+    //add element to make phones work here
+}
+
+}

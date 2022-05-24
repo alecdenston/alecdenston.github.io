@@ -1,0 +1,38 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+function plus() {
+    document.getElementById("pd").classList.toggle ("pdshow");
+    document.getElementById("ph").classList.toggle ("ph");
+    document.getElementById("pc").classList.toggle ("pc");
+}
+// media query event handler
+if (matchMedia) {
+  const mq = window.matchMedia("(min-width: 1000px)");
+  mq.addListener(WidthChange);
+  WidthChange(mq);
+}
+
+// media query change
+function WidthChange(mq) {
+  if (mq.matches) {
+    
+    document.getElementById("pd").classList.remove ("pdshow");
+    document.getElementById("ph").classList.remove ("ph");
+    document.getElementById("pc").classList.remove ("pc");
+  } else {
+    // window width is less than 500px
+  }
+
+}
+
+}
